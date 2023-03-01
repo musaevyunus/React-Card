@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import "./Card.css";
 
 export default function Card() {
-  const [text, setText] = useState(false);
   const [activ, setActiv] = useState(false);
   const [details, setDetails] = useState(false);
 
   const handleClick = () => {
-    setText(true);
+   
     setActiv(true);
   };
 
   const handleDeleteClick = () => {
     setActiv(false);
-    setText(false);
+    
   };
 
   const handleDetails = () => {
@@ -63,7 +62,7 @@ export default function Card() {
           Кроссовки Nike из линейки "Run"
         </div>
         <div className="btnbtn">
-          <button className="btn2" disabled={text} onClick={handleClick}>
+          <button className="btn2" disabled={activ} onClick={handleClick}>
             {activ ? "уже в корзине" : "Добавить в корзину"}
           </button>
           {activ && (

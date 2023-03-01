@@ -64,6 +64,11 @@ font-family: 'Poppins', sans-serif;
   
 }
 
+.btn2 :active {
+color: bisque;
+}
+
+
 .btnDelete {
     color: red;
     background-color: white;
